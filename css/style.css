@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+
+/* :root{ */
+   
+    /* --DarkBlueDark: hsl(209, 23%, 22%); (Dark Mode Elements) */
+    /* --VeryDarkBlueDark : hsl(207, 26%, 17%); ( DarkMode Background) */
+    /* --VeryDarkBlueLight : hsl(200, 15%, 8%); (Light Mode Text) */
+    /* --DarkGrayLight : hsl(0, 0%, 52%); (Light Mode Input) */
+    /* --VeryLightGrayLight : hsl(0, 0%, 98%); (Light Mode Background) */
+    /* --White : hsl(0, 0%, 100%); (Dark Mode Text & Light Mode Elements) */
+    
+    /* } */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    /* color: var(--VeryDarkBlueLight); */
+}
+
+
+body{
+    --background-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --input-color: hsl(0, 0%, 52%);
+    --elements-color : hsl(0, 0%, 100%);
+   
+
+    background-color: var(--background-color);
+    width: 100%;
+    color: var(--text-color);
+    
+}
+
+body.active{
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --input-color: var(--text-color);
+    --elements-color : hsl(209, 23%, 22%);
+}
+
+nav{
+    background-color: var(--elements-color);
+    padding: 5% 4%;
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo, .theme-switch{
+    color: var(--text-color);
+}
+.logo{
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.theme-switch{
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    background-color: transparent;
+
+}
+.theme-switch i{
+    margin-right: 5px;
+}
+.search{
+    padding: 5% 3%;
+    position: relative;
+}
+.search-box{
+    position: relative;
+}
+.search  .search-icon{
+    position: absolute;
+    color: var(--input-color);
+    top: 19px;
+    left: 50px;
+    font-weight: 600;
+}
+#search-country{
+    width: 100%;
+    padding: 13px 20px 13px 90px;
+    border: none;
+    background-color: var(--elements-color);
+    border-radius: 5px;
+    margin-bottom: 10%;
+    color: var(--input-color);
+    
+}
+#search-country::placeholder{
+    color: var(--input-color);
+    font-size: 0.9rem;
+
+}
+#search-country:focus-visible{
+    outline: none;
+}
+
+.selected, .options-container{
+    background-color: var(--elements-color);
+    width: 240px;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+    
+}
+.selected{
+    padding: 15px 15px 15px 30px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 0.85rem;
+}
+.selected button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+}
+
+
+.selected .filter-icon{
+    
+    color: var(--text-color);
+    font-size: 0.9rem;
+      
+}
+/* dropdown toggle */
+.filter-icon.active{
+    transform: rotate(180deg);
+}
+.selected p, .options-container p{
+    margin-bottom: 0;
+    
+}
+.options-container{
+    line-height: 2;
+    display: none;
+    position: absolute;
+}
+
+.options p{
+    padding: 0 20px 0 30px;
+    cursor: pointer;
+    
+}
+.options:first-child{
+    padding-top: 15px;
+}
+.options:last-child{
+    padding-bottom: 15px;
+}
+.options-container p:hover{
+    background-color: var(--text-color);
+    color: var(--background-color)
+    
+}
+.options-container.active{
+    display: block;
+    z-index: 1;
+    transition: 0.5s;
+   
+}
+/* .country-region{
+    width: 200px;
+    margin: 10% 0;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--elements-color);
+    color: var(--VeryLightGrayLight);
+    font-size: 0.8rem;
+} */
+
+/* country cards */
+.country-cards{
+    padding: 15% 11%;
+    
+}
+/* .card-row .nav-link{
+    padding: 0;
+} */
+.card-container{
+    width: 260px;
+    border: none;
+    margin-bottom: 30px;
+    
+    /* border-radius: 50%; */
+}
+.card-body{
+    
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    padding: 25px 25px 35px;
+    /* border-radius: 0 0 5px 5px; */
+}
+.card-title{
+    font-weight: 800;
+    font-size: 1.1rem;
+    
+}
+.card-text span{
+    font-weight: 600;
+}
+.card-text{
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+    
+}
+.row{
+    --bs-gutter-x:0;
+    
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 767px){
+    nav{
+
+        padding: 2% 7%;
+        
+    }
+    .search{
+        padding: 5% 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .search  .search-icon{
+        top: 20px;
+        left: 30px;
+    }
+    #search-country{
+        width: 90%;
+        padding: 13px 40px 13px 70px;
+        margin-bottom: 0;
+    }
+
+    .selected{
+        margin-bottom: 0;
+    }
+    .options-container{
+        margin-top: 10px;
+    }
+    .card-row .nav-link{
+        padding: 0;
+    }
+    .country-cards{
+        padding: 2% 13%;
+        padding-right: 3%; 
+        margin: 0 auto;   
+    }
+    .card-container{
+        width: 230px;
+        border: none; 
+    }
+    .card-img-top{
+        object-fit: cover;
+        height: 200px;
+    }
+    .card-body{
+        padding: 15px 15px 20px;
+        /* border-radius: 0 0 5px 5px; */
+    }
+    .col-lg-3{
+        width: 50%;
+       
+    }
+
+}
+@media screen and (min-width: 1023px){
+    .search  i{
+        top: 70px;
+        left: 100px;
+    }
+    #search-country{
+        width: 130%;
+        margin-bottom: 0;
+
+    }
+    /* country cards */
+    .country-cards{
+        padding: 2% 11%;
+        padding-right: 5%; 
+        margin: 0 auto;   
+    }
+    .card-container{
+        width: 230px;
+        border: none;   
+    }
+    .card-img-top{
+        object-fit: cover;
+        height: 200px;
+    }
+    .card-body{
+        padding: 15px 15px 20px;
+
+    }
+    .col-lg-3{
+        width: 33%;
+       
+    }
+
+
+}
+/* 1200px screen sizes */
+@media screen and (min-width: 1270px){
+    .country-cards{
+        padding: 2% 7%;
+        padding-right: 2%;  
+        margin: 0 auto;   
+    }
+
+    .col-lg-3{
+        width: 25%;
+       
+    }
+}  

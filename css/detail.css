@@ -1,0 +1,200 @@
+:root{
+   
+    --DarkBlueDark: hsl(209, 23%, 22%); /* (Dark Mode Elements) */
+    --VeryDarkBlueDark : hsl(207, 26%, 17%); /*( DarkMode Background)*/
+    --VeryDarkBlueLight : hsl(200, 15%, 8%); /*(Light Mode Text)*/
+    --DarkGrayLight : hsl(0, 0%, 52%); /*(Light Mode Input)*/
+    --VeryLightGrayLight : hsl(0, 0%, 98%); /*(Light Mode Background)*/
+    --White : hsl(0, 0%, 100%); /*(Dark Mode Text & Light Mode Elements)*/
+    
+    }
+
+/* body{
+    --background-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --input-color: hsl(0, 0%, 52%);
+    --elements-color : hsl(0, 0%, 100%);
+    
+
+    background-color: var(--background-color);
+    width: 100%;
+    color: var(--text-color);
+    
+}
+
+body.active{
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --input-color: var(--text-color);
+    --elements-color : hsl(209, 23%, 22%);
+} */
+
+.country-details{
+    padding: 5% 8%;
+    /* color: var(); */
+}
+.back-button{
+    border: none;
+    padding: 5px 25px;
+    margin: 3% 0 15% 0;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    box-shadow: 2px 2px  10px rgba(8, 8, 8, 60%);
+    
+}
+.back-button:hover{
+    color: var(--text-color);
+}
+.back-button i{
+    margin-right: 15px;
+}
+.country-details img{
+    /* width: 100%; */
+    width: 310px;
+    object-fit: contain;
+    margin: 3% 0 10% 0;
+}
+.card-title{
+    font-size: 1.5rem;
+    
+}
+.card-text{
+    line-height: 2.5;
+    font-size: 1rem;
+}
+.details-one{
+    margin: 10% 0 15%;
+}
+.border-countries{
+    margin: 15% 0;
+   
+}
+.border-countries p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+}
+.border-button{
+    display: grid;
+    justify-content: center; 
+    align-items: center; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.border-country{
+    margin-top: 3%;
+    border: none;
+    padding: 7px 15px;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    box-shadow: 2px 2px  10px rgba(8, 8, 8, 60%);
+
+}
+@media screen and (min-width: 767px){
+    .country-details img{
+        width: 100%;   
+    }
+    .card-title{
+        font-size: 1.8rem; 
+    }
+    .card-text{
+        font-size: 1.3rem;
+    }
+   
+}
+
+@media screen and (min-width: 1023px){
+
+    .back-button{
+        margin-bottom: 5%;
+    }
+    .country-details-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+    }
+    .country-img{
+        flex-basis: 35%;
+
+    }
+
+    .country-details img{
+        width: 350px;
+        object-fit:cover;
+        height: 300px;
+    }
+
+    .country-details-content{
+        padding: 5% 0;
+        flex-basis: 60%;
+        margin-left: 40px;
+    }
+    .card-text{
+        line-height: 2.1;
+        font-size: 0.9rem;
+    }
+    .details-one{
+        margin: 2% 0 0;
+    }
+    .details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+   
+    .details-two{
+        margin-bottom: 13%;
+    }
+    .border-countries{
+        margin: 10% 0;
+        display: flex;
+        align-items: center;
+       
+    }
+    .border-countries p{
+        font-size: 1rem;
+    }
+    .border-button{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-left: 2%;     
+
+    }
+    .border-country{
+        margin-bottom: 3%;
+        margin-top: 0;
+        font-size: 0.85rem;
+    }
+
+}
+    
+
+@media screen and (min-width: 1275px){
+
+    .country-img{
+        flex-basis: 50%;
+
+    }
+    .country-details img{
+        width: 500px;
+        height: 400px;
+    }
+    .country-details-content{
+        padding: 5% 0;
+        flex-basis: 45%;
+        margin-left: 40px;
+    }
+    .card-text{
+        font-size: 1rem;
+    }
+    .border-countries p{
+        font-size: 1.1rem;
+    }
+}
