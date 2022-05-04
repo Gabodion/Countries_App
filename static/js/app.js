@@ -6,7 +6,7 @@ const filterBtn = document.querySelector(".filter-icon");
 const countryCards = document.querySelector(".card-row");
 const searchBox = document.querySelector("#search-country");
 
-const body= document.querySelector("body")
+const body= document.querySelector("body");
 
 // const countryImg = document.querySelectorAll(".card-img-top");
 // console.log(countryFullDetails)
@@ -134,8 +134,9 @@ function getByRegion(){
 function dynamicCards(complete_data){
     let country_card = "";
     // let country_details = "";
+
     complete_data.map(data => {
-        country_card += ` <a href= "detail.html" class="nav-link col-lg-3 col-sm-4"> <div class="card card-container  ">
+        country_card += ` <a href= "${window.static_folder}" class="nav-link col-lg-3 col-sm-4"> <div class="card card-container  ">
                     <img src="${data.flags['png']}" class="card-img-top" alt="${data.name}-flag">
                     <div class="card-body">
                         <h3 class="card-title">${data.name}</h3>
@@ -144,6 +145,7 @@ function dynamicCards(complete_data){
                         <p class="card-text"><span>Capital:</span> ${data.capital}</p>    
                     </div>
                 </div> </a>`       
+                
     })
     countryCards.innerHTML = country_card;
     const countryImg = document.querySelectorAll(".card-img-top")
@@ -153,12 +155,3 @@ function dynamicCards(complete_data){
 
 
 
-function getBorders(items){
-    let item;
-    items.forEach(item => {
-        return item;
-    })
-    // console.log(item)
-}
-
- // <a href= "" class="nav-link"> 

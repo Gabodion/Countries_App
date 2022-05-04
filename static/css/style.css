@@ -289,7 +289,7 @@ nav ul{
     #search-country{
         width: 130%;
         margin-bottom: 0;
-
+        /* background: url(../../templates/detail.html); */
     }
     /* country cards */
     .country-cards{
