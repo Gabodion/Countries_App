@@ -12,16 +12,10 @@ const body= document.querySelector("body");
 // console.log(countryFullDetails)
 
 window.addEventListener("DOMContentLoaded", () => {
-    getCountry();
-    
-    
-    
+    getCountry();   
 })
-// const countryImg = document.querySelectorAll(".card-img-top");
-// countryImg.forEach(img => img.addEventListener("click", () => {
-//     console.log(123)
-// }))
 
+// filterbtn toggler
 filterBtn.addEventListener("click", () => {
     optionsContainer.classList.toggle("active");
     filterBtn.classList.toggle("active");
@@ -36,10 +30,7 @@ optionsList.forEach(option => {
         filterBtn.classList.remove("active");
     })
 })
-// light and dark mode switch
-// lightDarkTheme.addEventListener("click", () =>{
-//     body.classList.toggle("active");
-// })
+
 
 // listen to search input and search country
 searchBox.addEventListener("input", () => {
@@ -47,15 +38,15 @@ searchBox.addEventListener("input", () => {
     const searchApi = `https://restcountries.com/v2/name/${searchName}`
     fetch(searchApi).then(
         response => {
-            return response.json()
+            return response.json();
         }
     ).then(
         countrySearch => {
-            dynamicCards(countrySearch)
+            dynamicCards(countrySearch);
         }
     ).catch(
         errors => {
-        console.log(errors)
+        console.log(errors);
     })
 })
 
@@ -102,33 +93,20 @@ function getByRegion(){
         const regionApi = `https://restcountries.com/v2/region/${regionName.toLowerCase()}`
         fetch(regionApi).then(
             response => {
-                return response.json()
+                return response.json();
             }
         ).then(
             countryRegion => {
-                dynamicCards(countryRegion)
+                dynamicCards(countryRegion);
             }
         ).catch(
             errors => {
-            console.log(errors)
+            console.log(errors);
         })
     }
     
 }
 
-// let images = getCountry()
-// console.log(images)
-
-// let country_name = getCountryName(images)
-// console.log(country_name)
-
-
-
-// console.log(image)
-
-// const countryImg = countryCards.querySelectorAll(".card-container")
-// console.log(countryImg)
-// countryCards.forEach(img => img.addEventListener("click", getCountryInfo))
 
 // get dynamic country data
 function dynamicCards(complete_data){
@@ -148,8 +126,8 @@ function dynamicCards(complete_data){
                 
     })
     countryCards.innerHTML = country_card;
-    const countryImg = document.querySelectorAll(".card-img-top")
-    getCountryName(countryImg)
+    const countryImg = document.querySelectorAll(".card-img-top");
+    getCountryName(countryImg);
 }
 
 

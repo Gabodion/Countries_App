@@ -1,16 +1,10 @@
 
-
-
-
 const countryNames = localStorage.getItem("name");
 window.addEventListener("DOMContentLoaded", () => {
     getCountryInfo(countryNames);
-    
-    
-    
 })
 
-
+// get country info
 function getCountryInfo(name){
     fetch(`https://restcountries.com/v2/name/${name}`)
     .then(
@@ -78,3 +72,8 @@ function getCountryInfo(name){
         }
     )
 }
+
+
+
+
+
